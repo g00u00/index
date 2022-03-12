@@ -1,0 +1,234 @@
+Обычный(начальный) режим - ESC
+Командный режим - :
+Режим редактирования и вставки  - i
+:w  – сохранить файл
+:q– выйти из редактора
+
+:set fileformat=unix
+:set number
+:set nonumber
+u – undo, ^r – redo
+. – повторить последние де:wйствия
+
+unix comands
+-------------
+:!ls 
+:!date
+:r !date
+
+=====================
+Работа с файлами
+:e  – создание/открытие последнего файла
+:e. файл-менеджер (окно ^w n )
+:w  – сохранить файл
+:sav file - сохранить файл с именем
+:q– выйти из редактора
+:q!– аварийный(без сохранения) выйти из редактора 
+
+Перемещение
+-----------
+hjkl
+0 – в начало строки, $ – конец строки ^ – начало “видимой” строки, (поставить  пробел )
+w/W – по словам вперед, e – по словам вперед (курсор на конце слова), b/B – по словам назад
+^F B D U – скроллить вверх вниз на половину экрана:w C-F – листать страницу вниз, C-B – страницу вверх H – первая видимая строка, M – середина, L – последняя строка zt – сделать текущую строку верхней, zz – середина, zb – нижняя 
+) {}   - по предложениям (точка) и по параграфам(пустая строка) (начало и конец).
+gg – в начало файла. 
+G – в конец файла.
+
+Копирование, удаление, вставки
+---------
+i – вставить до курсора, a – после курсора
+I – вставить в начало строке, A – в конец строки
+o – вставить строку ниже 
+O – вставить строку выше
+y yw yy  -скопировать
+p - вставлять
+d dw dd– удалить
+>> <<  4>> 4<< сдвиги
+
+p – вставить удаленный символ после курсора, P – до курсора
+J - объединть строку
+r – заменить символ
+c – удалить и остаться в режиме вставки
+cc – заменить строку, C = c$ – заменить от курсора до конца строки
+dd - удаление строки
+3d - 3 строки в в неименованый	 
+3x - удаление символов после курсора 
+3X - до
+^v W x - удаление слова слов (до символа после пробела )
+
+Поиск и замена
+------------
+/ w/W + Enter  - одновременно выделяются вперед
+?w/W  - и одновременно выделяются назад
+nN  -  повторение поиска символов:
+:%s/46.19.37.229/185.14.187.176/gc 
+
+Маркеры
+-----
+ma
+'a
+`b
+'или` -перемещение по маркерам (вначале строки или определеноом месте)
+:marks
+:delm a
+:delm a-z
+:help delm
+
+
+
+Регистры
+---------
+  безимянный 
+- удаленный символ или символы
+0-9  
+0 - Y поcледний 
+1 последний удаленный и содержит полную строку
+"ayy в регистр a копируется одна строка
+"a1y  - странно, но 2 строки и далее аналогично
+"ad
+"ap
+:registers
+:let @a=@_              : очистить регистр a
+:let @a=""              : очистить регистр a
+Удаление и регистры
+!  _ в пустой регистр, в "-" и никуда далее
+ - можно восстановить только сразу
+ - или чере u
+!  - в первый регистр и далее сдвиги
+
+===============
+Визульный режим - v
+
+shift >  - сдвиги блоков
+shift <
+
+=============================
+Multiwindow Editing
+-------------------
+"CTRL-w n" - создать новое окно (":new файл" - открыть заданный файл)
+"CTRL-w q" - закрыть текущее окно 
+":qall" - закрыть все окна разом, ":qall!" - без сохранения, ":write" - записать данные во всех  окнах)
+"CTRL-w w" - быстрое переключение на следующее окно
+^W+_ - раскрыть текущее окно на весь экран, оставив от остальных по одной строке
+^W=	сравнять все окна
+----------------
+"CTRL-w влево" - активация левого окна
+"CTRL-w вправо" - активация правого окна
+"CTRL-w вверх" - активация верхнего окна
+"CTRL-w вниз" - активация нижнего окна
+CTRL-w h" - переместить окно влево
+"CTRL-w j" - переместить окно ниже
+"CTRL-w k" - переместить окно выше
+"CTRL-w l" - переместить окно вправо
+"CTRL-w t" - переместить окно на самый верх
+"CTRL-w b" - переместить окно в самый низ
+
+"CTRL-w +", "CTRL-w -" - увеличение или уменьшение текущего размера окна
+"ESC 5 CTRL-w -", "ESC 5 CTRL-w +" - изменение размера сразу на 5 строк/столбцов
+Открытие двух или трех файлов в разных окнах vim.
+С горизонтальной разбивкой окон на экране:
+   vim -o /etc/passwd /etc/hosts
+   vim -o /etc/passwd -o /etc/group /etc/hosts
+
+С вертикальной разбивкой окон на экране:
+   vim -O /etc/passwd /etc/hosts
+   vim -O /etc/passwd -O /etc/group /etc/hosts
+
+Наглядный просмотр отличий нескольких файлов
+   vim -d файл1 файл2
+   vim -d файл1 -d файл2 файл3
+
+CTRL-w s" - разбить текущее окно на 2 части для синхронного редактирования разных частей
+   (в каждом окне будет содержимое одного и того же файла).
+
+:split  копия окна по вертикали
+:vsplit  - копия окна по горизонтали
+
+:[n]split [++opt] [+cmd] [file]
+
+To move from the current Vim window to the next one, type CTRL-W j (or CTRLW
+<down> or CTRL-W CTRL-J ).
+CTRL-W r rotates windows to the right or down. Its complement is CTRL-W R ,
+which rotates windows in the opposite direction.
+CTRL-W x and CTRL-W CTRL-X let you exchange two windows in a row or column
+of windows.
+^WK Move the current window to the top of the screen, using the full width of the screen.
+^WJ Move the current window to the bottom of the screen, using the full width of the screen.
+CTRL-W + and CTRL W -
+^Wq (or ^W^Q, or :quit) is really just a window version of the :quit command.
+^Wc (or :close[!]) closes the current window.
+
+
+====================================
+Буферы
+------
+help buffer
+:buffers
+:b1
+:b2
+
+===============================
+Окончания строк в  файле  CRLF  - Dos Unix
+vim -b file
+:set list
+:%s/^M//g
+чтобы вставить спец символ ^M используйте сочитание клавиш ctrl-v ctrl-m
+
+"------------------------------------------------------------
+" Indentation options {{{1
+"
+" Indentation settings according to personal preference.
+ 
+" Indentation settings for using 4 spaces instead of tabs.
+" Do not change 'tabstop' from its default value of 8 with this setup.
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+ 
+" Indentation settings for using hard tabs for indent. Display tabs as
+" four characters wide.
+"set shiftwidth=4
+"set tabstop=4
+
+
+=================================
+.vimrc 2016-02-12
+---------------
+
+:syntax enable
+:set number
+:set autoindent
+
+:set nofoldenable
+:set fdm=indent
+:set foldcolumn=3
+
+:set encoding=utf8
+:set fileencodings=utf8
+":set encoding=cp1251
+":set fileencodings=cp1251
+
+:set wrap "перенос по словам
+:set linebreak
+:set showbreak=+
+
+:set showcmd "автодополнение команд
+
+:set nolist "окочание и пробел
+
+:set title "буфер обмена в заголовке терминала
+
+:set hlsearch "подсветка при поиске
+
+:set ignorecase " игнорировать регистр при поиске
+
+:set nobackup
+
+" Indentation settings for using 4 spaces instead of tabs
+set shiftwidth=4 
+set softtabstop=4
+set expandtab
+
+
+
