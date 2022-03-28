@@ -7,6 +7,12 @@
     <!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
               integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
     <link href="./css/bootstrap.css" rel="stylesheet">
+    <style>
+        h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+            margin-top: 1.5rem;
+        }
+
+    </style>
     <title>Обучающий сайт (GitHub)</title>
 </head>
 
@@ -38,19 +44,22 @@
 
         <!--Оригинальное  содержание страницы-->
         <div class="card-body text-start">
-            <h5>ТЕКУЩЕЕ</h5>
-            <p>+7 908 1605316 - телефон для решения срочных проблем
+            <div>
+                <h5>ТЕКУЩЕЕ</h5>
+                <br>+7 908 1605316 - телефон для решения срочных проблем
                 <br>https://us04web.zoom.us/j/5087759459?pwd=8G1Yujw576psJYA1YJVNGbAQrC4LEE.1
                 <br>Идентификатор: 508 775 9459 Код: 3eGBaS
-            </p>
-            <p>
-               <br>https://my.hse.ru/marketplace/public/shell/login
-               <br>https://my.hse.ru/marketplace/teacher/journal/statements
-               <br>https://teams.microsoft.com/
-            </p>    
+            </div>
 
-            <p>2021. Установка сервера на Oracle VM VirtualBox
-                <br>https://www.virtualbox.org/wiki/Downloads
+            <p>
+                <br>https://my.hse.ru/marketplace/public/shell/login
+                <br>https://my.hse.ru/marketplace/teacher/journal/statements
+                <br>https://teams.microsoft.com/
+            </p>
+
+            <div>
+                <h6>Установка сервера на Oracle VM VirtualBox</h6>
+                https://www.virtualbox.org/wiki/Downloads
                 <br>https://www.oracle.com/virtualization/technologies/vm/downloads/virtualbox-downloads.html
                 <br>https://eduhseru-my.sharepoint.com/:f:/g/personal/vmarshirov_hse_ru/EgpxkaGoUmVJuITGX10NuagBXsVxhtx9u7wfXsz0SnfWgA?e=yW1Et6
                 <br>Если возникли проблемы ...
@@ -58,115 +67,122 @@
                 <br>https://releases.ubuntu.com/?_ga=2.182510758.1423337705.1647852606-1643302889.1617552020
                 <br>https://github.com/g00u00/github
                 <br>https://github.com/g00u00/root
-            </p>
+            </div>
 
-            <p>Аренда виртуального сервера
-            <br>https://www.reg.ru/vps/cloud/    
-            <br>https://www.reg.ru/user/account/#/
-             </p>   
-            
-            <p>2022. Разработка web-приложений
-                <br>https://teams.microsoft.com/l/channel/19%3a-N_WCk4mO91uk91CJHDKNk4nFbgTB7i5Bfwp1_doe0c1%40thread.tacv2/%25D0%259E%25D0%25B1%25D1%2589%25D0%25B8%25D0%25B9?groupId=edee0733-2c25-4b51-85fd-b346e46d6b35&tenantId=21f26c24-0793-4b07-a73d-563cd2ec235f
-            </p>
-
-            <p>2022. Цифровая грамотность
+            <div>
+                <h6>Аренда виртуального сервера</h6>
+                https://www.reg.ru/vps/cloud/
+                <br>https://www.reg.ru/user/account/#/
                 <br>
+            </div>
+
+            <div>
+                <h6>2022. Разработка web-приложений</h6>
+                https://teams.microsoft.com/l/channel/19%3a-N_WCk4mO91uk91CJHDKNk4nFbgTB7i5Bfwp1_doe0c1%40thread.tacv2/%25D0%259E%25D0%25B1%25D1%2589%25D0%25B8%25D0%25B9?groupId=edee0733-2c25-4b51-85fd-b346e46d6b35&tenantId=21f26c24-0793-4b07-a73d-563cd2ec235f
+            </div>
+            <div>
+                <h6>2022. Цифровая грамотность</h6>
                 https://teams.microsoft.com/l/team/19%3a8ThQ3SSvGgAO2BWf0wYgjwcQh01zD_Ib8lofH0Q3IzE1%40thread.tacv2/conversations?groupId=648822d6-10ff-4022-890f-7885c127d0df&tenantId=21f26c24-0793-4b07-a73d-563cd2ec235f
-            </p>
+                </h6>
+            </div>
 
-            <h5>ВАЖНО ...</h5>
-            <p>1. Сервер предназначен для обучения. Часто выполняются опасные действия и ваши данные могут быть
-                потеряны
-                и поэтому, после окончания сеанса работы, следует сохранять данные на внешнем носителе.
-            </p>
-            <p>2. Накануне экзамена каждому студенту обязательно проверить оценку в ведомости. При необходимости
-                прийти
-                на экзамен. Корректировка оценок возможна только до завершения очередного практического занятия.
-            </p>
-            <p>3. Каждому студенту выделяется до 15 MB
-                <br>При превышении установленного лимита, все данные из домашнего раздела удаляю без предупреждения.
-                <br>du -skh * | sort -g -объем занятого домашнего или другого каталога и его разделов
-                <br>df -h - состояние сервера
-                <br>edquota -g www-data - проверить квоту на группу (если проблемы с записью - quotacheck -vagum -f)
-                <br>less /var/log/apache2/error.log - лог ошибок - для отладки
-                <br>apt-cache search deb*
-                <br>ip -s addr
-            </p>
+            <div>
+                <h5>ВАЖНО ...</h5>
+                <p>1. Сервер предназначен для обучения. Часто выполняются опасные действия и ваши данные могут быть
+                    потеряны
+                    и поэтому, после окончания сеанса работы, следует сохранять данные на внешнем носителе.
+                </p>
+                <p>2. Накануне экзамена каждому студенту обязательно проверить оценку в ведомости. При необходимости
+                    прийти
+                    на экзамен. Корректировка оценок возможна только до завершения очередного практического занятия.
+                </p>
+                <p>3. Каждому студенту выделяется до 15 MB
+                    <br>При превышении установленного лимита, все данные из домашнего раздела удаляю без предупреждения.
+                    <br>du -skh * | sort -g -объем занятого домашнего или другого каталога и его разделов
+                    <br>df -h - состояние сервера
+                    <br>edquota -g www-data - проверить квоту на группу (если проблемы с записью - quotacheck -vagum -f)
+                    <br>less /var/log/apache2/error.log - лог ошибок - для отладки
+                    <br>apt-cache search deb*
+                    <br>ip -s addr
+                </p>
+            </div>
 
+            <div>
+                <h5>ПОДСКАЗКИ ПО ЛОГИНАМ, ПАРОЛЯМ АДРЕСАМ. ДОМЕНЫ, ГРУППЫ, ПОРТЫ</h5>
+                <p>176.56.236.158 - IP - адрес сервера, ssh(putty)- порт 22. Для ftp(filezilla) - 21
+                    <br>passwd g05u00 abc123- пример команды для изменения пароля
+                    <br>http://g01u01.nn2000.info или http://176.56.236.158:7601
+                    <br>http://176.56.236.158:80 - (g01u00) _edu_tmp
+                    <br>http://176.56.236.158:8001 - (g01u01) - server
+                    <br>http://176.56.236.158:8002 - http://176.56.236.158:8005- - (g01u02-g01u05)
+                    <br>http://176.56.236.158:7300 - http://176.56.236.158:7399 - (g03u00-g03u99)
+                    <br>http://176.56.236.158:7400 - http://176.56.236.158:7499 - (g04u00-g04u99)
+                    <br>http://176.56.236.158:7609 - Марширов В.В. (g06u09)
+                    <br>http://176.56.236.158:7610 - Шадрина Е.В. (g06u10)
+                    <br>http://176.56.236.158:7627 - swot (g06u27)
+                    <br>http://176.56.236.158:7628 - html, css, js
+                    <br>http://176.56.236.158:7629 - mysql,cgi
+                    <br>http://176.56.236.158:7630 - bash
+                    <br>http://176.56.236.158:7631 - gcc, cpp, cpp_cgi ( )
+                    <br>http://176.56.236.158:7632 - разработка веб-приложений (g06u32)
+                    <br>http://176.56.236.158:7633 - основы программирования Python (g06u33)
+                    <br>http://176.56.236.158:7634 - Dj (g06u34)
+                    <br>http://176.56.236.158:7640 - ndExp (g06u40)
+                    <br>176.56.236.158
+                </p>
+            </div>
 
-            <h5>ПОДСКАЗКИ ПО ЛОГИНАМ, ПАРОЛЯМ АДРЕСАМ. ДОМЕНЫ, ГРУППЫ, ПОРТЫ</h5>
-            <p>176.56.236.158 - IP - адрес сервера, ssh(putty)- порт 22. Для ftp(filezilla) - 21
-                <br>passwd g05u00 abc123- пример команды для изменения пароля
-                <br>http://g01u01.nn2000.info или http://176.56.236.158:7601
-                <br>http://176.56.236.158:80 - (g01u00) _edu_tmp
-                <br>http://176.56.236.158:8001 - (g01u01) - server
-                <br>http://176.56.236.158:8002 - http://176.56.236.158:8005- - (g01u02-g01u05)
-                <br>http://176.56.236.158:7300 - http://176.56.236.158:7399 - (g03u00-g03u99)
-                <br>http://176.56.236.158:7400 - http://176.56.236.158:7499 - (g04u00-g04u99)
-                <br>http://176.56.236.158:7609 - Марширов В.В. (g06u09)
-                <br>http://176.56.236.158:7610 - Шадрина Е.В. (g06u10)
-                <br>http://176.56.236.158:7627 - swot (g06u27)
-                <br>http://176.56.236.158:7628 - html, css, js
-                <br>http://176.56.236.158:7629 - mysql,cgi
-                <br>http://176.56.236.158:7630 - bash
-                <br>http://176.56.236.158:7631 - gcc, cpp, cpp_cgi ( )
-                <br>http://176.56.236.158:7632 - разработка веб-приложений (g06u32)
-                <br>http://176.56.236.158:7633 - основы программирования Python (g06u33)
-                <br>http://176.56.236.158:7634 - Dj (g06u34)
-                <br>http://176.56.236.158:7640 - ndExp (g06u40)
-                <br>176.56.236.158
-            </p>
+            <div>
+                <h5>РЕКОМЕНДУЕМОЕ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ...</h5>
+                <p>Putty -ssh-клиент
+                    <br>https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+                </p>
 
+                <p>FileZilla - ftp-клиент
+                    <br> https://filezilla-project.org/download.php?type=client</p>
 
-            <h5>РЕКОМЕНДУЕМОЕ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ...</h5>
-            <p>Putty -ssh-клиент
-                <br>https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
-            </p>
+                <p>NotePad++ - простой и удобный текстовый редактор
+                    <br>https://notepad-plus-plus.org/downloads/)
+                    <br>Вид - Отображение символов - Отобразить все символы - (пробелы, табуляция, LF)?
+                    <br>Правка - Формат конца строк -LF
+                    <br>Опции -Настройка - (Синтаксисы) Настройка табуляции - Заменить пробелами
+                    <br>Кодировка. Преобразовать в UTF-8 без BOM
+                </p>
 
-            <p>FileZilla - ftp-клиент
-                <br> https://filezilla-project.org/download.php?type=client</p>
+                <p> Python - интерпретатор
+                    <br>https://www.python.org/downloads/
+                </p>
 
-            <p>NotePad++ - простой и удобный текстовый редактор
-                <br>https://notepad-plus-plus.org/downloads/)
-                <br>Вид - Отображение символов - Отобразить все символы - (пробелы, табуляция, LF)?
-                <br>Правка - Формат конца строк -LF
-                <br>Опции -Настройка - (Синтаксисы) Настройка табуляции - Заменить пробелами
-                <br>Кодировка. Преобразовать в UTF-8 без BOM
-            </p>
+                <p>PyCharm Professional - среда разработки - бесплатна для студентов. При регистрации указывать
+                    электронку
+                    Вышки
+                    <br>https://www.jetbrains.com/ru-ru/community/education/#students
+                    <br>https://www.jetbrains.com/ru-ru/pycharm/download/
+                </p>
+            </div>
 
-            <p> Python - интерпретатор
-                <br>https://www.python.org/downloads/
-            </p>
+            <div>
+                <h5>ТЕСТИРОВАНИЕ</h5>
+                <p><b>Студентам</b>:
+                    <br>1. Запустить тест с соответствующей темой
+                    <br><a href="http://176.56.236.158:7600/public_html/testing/" target="_blank">http://176.56.236.158:7600/public_html/testing/</a>
+                    <br><a href="http://176.56.236.158/public_html/testing/" target="_blank">http://176.56.236.158/public_html/testing/</a>
+                    <br>2. Запустить скрипт, соответствующий номеру потока(группы) (логин:notroot; пароль:notroot)
+                    <br><a href="http://176.56.236.158:7609/cgi-bin/login_ip.py" target="_blank">http://176.56.236.158:7609/cgi-bin/login_ip.py</a>
+                    - BI<!--группа 01-->
+                    <br> и, используя этот скрипт, отправить свои данные преподавателю
+                </p>
 
-            <p>PyCharm Professional - среда разработки - бесплатна для студентов. При регистрации указывать
-                электронку
-                Вышки
-                <br>https://www.jetbrains.com/ru-ru/community/education/#students
-                <br>https://www.jetbrains.com/ru-ru/pycharm/download/
-            </p>
-
-
-            <h5>ТЕСТИРОВАНИЕ</h5>
-            <p><b>Студентам</b>:
-                <br>1. Запустить тест с соответствующей темой
-                <br><a href="http://176.56.236.158:7600/public_html/testing/" target="_blank">http://176.56.236.158:7600/public_html/testing/</a>
-                <br><a href="http://176.56.236.158/public_html/testing/" target="_blank">http://176.56.236.158/public_html/testing/</a>
-                <br>2. Запустить скрипт, соответствующий номеру потока(группы) (логин:notroot; пароль:notroot)
-                <br><a href="http://176.56.236.158:7609/cgi-bin/login_ip.py" target="_blank">http://176.56.236.158:7609/cgi-bin/login_ip.py</a>
-                - BI<!--группа 01-->
-                <br> и, используя этот скрипт, отправить свои данные преподавателю
-            </p>
-
-            <p><b>Преподавателям</b> (g06u09-g06u11):
-                <br>1. Проверить и скопировать логины и IP студентов из <br>~/tmp/login_ip.txt в <br>~/public_html/login_ip.txt
-                <br>Обратить внимание (macOS-убрать пробел в конце строки ,LF, пустые строки в начале и в конце
-                файла
-                ~/public_html/login_ip.txt)
-                <br>2. Скриптом<br><a href="http://176.56.236.158:7600/cgi-bin/login_ip.sh" target="_blank">http://176.56.236.158:7600/cgi-bin/login_ip.sh</a>
-                - дозаписать студентов в общий список и проверить
-                <!--                <br><a href="http://176.56.236.158:7600/cgi-bin/results.sh" target="_blank">http://176.56.236.158:7600/cgi-bin/results.sh</a> - списки студентов выполняющих тестирование-->
-            </p>
-
+                <p><b>Преподавателям</b> (g06u09-g06u11):
+                    <br>1. Проверить и скопировать логины и IP студентов из <br>~/tmp/login_ip.txt в <br>~/public_html/login_ip.txt
+                    <br>Обратить внимание (macOS-убрать пробел в конце строки ,LF, пустые строки в начале и в конце
+                    файла
+                    ~/public_html/login_ip.txt)
+                    <br>2. Скриптом<br><a href="http://176.56.236.158:7600/cgi-bin/login_ip.sh" target="_blank">http://176.56.236.158:7600/cgi-bin/login_ip.sh</a>
+                    - дозаписать студентов в общий список и проверить
+                    <!--                <br><a href="http://176.56.236.158:7600/cgi-bin/results.sh" target="_blank">http://176.56.236.158:7600/cgi-bin/results.sh</a> - списки студентов выполняющих тестирование-->
+                </p>
+            </div>
         </div>
 
         <!--Подвал страницы-->
@@ -175,9 +191,9 @@
         </div>
     </div>
 </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
 </body>
 </html>
