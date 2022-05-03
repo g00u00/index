@@ -1,7 +1,10 @@
 /.ssh/*
-/__pycache__/*
-/*/__pycache__/*
 /.idea/*
 /venv/*
+/.local/*
+/.cache/*
+.viminfo
 id_rsa
 id_rsa.pub
+/__pycache__/*
+/*/__pycache__/*
