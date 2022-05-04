@@ -4,6 +4,7 @@
 /.local/*
 /.cache/*
 .viminfo
+.bash_history
 id_rsa
 id_rsa.pub
 /__pycache__/*
